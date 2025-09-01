@@ -20,10 +20,16 @@ struct Part1: View {
                         Text("1. House")
                             .font(.title)
                     }
-                    Text("Your first clue (This one is free :D)")
                 }
             }
         }
         
+    }
+
+}
+
+struct Part1_Previews: PreviewProvider {
+    static var previews: some View {
+        Part1()
     }
 }
