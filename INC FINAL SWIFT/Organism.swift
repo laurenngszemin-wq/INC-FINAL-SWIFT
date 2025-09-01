@@ -10,9 +10,18 @@ struct Organism: View {
         NavigationView {
             VStack {
                 Text("""
-                     Accursed _____, whose hunger knows no close,
-                     With ______, devours both bread and ____.
+                     Accursed ____, whose hunger knows no close,
+                     With ______, devours both bread and bone.
+                     So dire his craving, wealth to hunger goes—
+                     His master ____, and conscience is o’erthrown.
+
+
+                     For every ____, thy master bends and breaks,
+                     To __________ hath no end.
+                     All honor lost, each wretched choice he makes,
+                     For the ____, his soul must now ____.
                      """)
+
                 .fontWeight(.bold)
                 
             }
