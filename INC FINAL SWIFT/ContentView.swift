@@ -11,7 +11,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 
-                Text("The INCoin Heist test")
+                Text("The INCoin Heist")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
