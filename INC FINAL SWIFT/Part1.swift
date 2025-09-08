@@ -4,9 +4,18 @@
 //
 //  Created by Lauren Ng Sze Min on 27/8/25.
 //
+
+
 import SwiftUI
 
 struct Part1: View {
+    @State private var numtask: Int = 7
+    @State private var completed: Int = 0
+    
+    var completionbar: Float {
+        Float(completed) / Float(numtask)
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -14,18 +23,19 @@ struct Part1: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.teal)
                     .font(.headline)
-                ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                List{
-                    NavigationLink(destination: Organism() ) {
+                
+                ProgressView(value: completionbar)
+                
+                List {
+                    NavigationLink(destination: Organism(completed: $completed)) {
                         Text("1. House")
                             .font(.title)
                     }
                 }
             }
+            .padding()
         }
-        
     }
-
 }
 
 struct Part1_Previews: PreviewProvider {
@@ -33,3 +43,4 @@ struct Part1_Previews: PreviewProvider {
         Part1()
     }
 }
+
