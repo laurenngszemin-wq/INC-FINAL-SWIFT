@@ -1,1 +1,55 @@
+import SwiftUI
+
+struct Culprits: View {
+    var body: some View {
+        VStack {
+            // Heading at the top
+            Text("Meet the culprits")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.top, 20)
+            
+            Spacer().frame(height: 20)
+            
+            // First row: two images
+            HStack(spacing: 1) {
+                VStack {
+                    Text("Daveon")
+                        .font(.headline)
+                    Image("Daveon")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 300, height: 300)
+                }
+                
+                VStack {
+                    Text("Mr Rajesh")
+                        .font(.headline)
+                    Image("Mr rajesh")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                }
+            }
+            
+            // Second row: single centered image
+            VStack {
+                Text("Schoobert")
+                    .font(.headline)
+                Image("Schoobertt")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 300)
+            }
+            .padding(.top, 20)
+            
+            Spacer() // Push everything to top nicely
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+#Preview {
+    Culprits()
+}
 
